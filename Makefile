@@ -20,7 +20,7 @@ venv: venv/touchfile
 
 build.stamp: venv .init.stamp sources/config*.yaml $(SOURCES)
 	for config in sources/config*.yaml; do \
-		. venv/bin/activate; rm -rf fonts/; gftools builder $config && touch build.stamp; \
+		. venv/bin/activate; rm -rf fonts/; python3 -m gftools.actions.notobuilder $$config && touch build.stamp; \
 	done
 
 .init.stamp: venv
