@@ -10,8 +10,8 @@ import sys
 from urllib.parse import quote
 import subprocess
 
-BASE_OWNER = "googlefonts"
-BASE_REPONAME = "Unified-Font-Repository"
+BASE_OWNER = "notofonts"
+BASE_REPONAME = "noto-project-template"
 DUMMY_URL = "https://yourname.github.io/your-font-repository-name"
 
 
