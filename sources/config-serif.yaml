@@ -4,3 +4,6 @@ sources:
 axisOrder:
   - wght
 familyName: Noto Serif Test
+includeSubsets:
+  - name: "GF Glyph Sets/GF-latin-core"
+    from: "Noto Serif"
