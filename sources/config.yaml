@@ -1,8 +1,7 @@
+googleFonts: true
 sources:
-  - Rubik.glyphs
-  - Rubik-Italic.glyphs
-axisOrder:
-  - wght
-  - ital
-familyName: Rubik
-googleFonts: false
+- NotoSansTest.glyphs
+familyName: Noto Sans Test
+includeSubsets:
+  - name: "GF Glyph Sets/GF-latin-core"
+    from: "Noto Sans"
