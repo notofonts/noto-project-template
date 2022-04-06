@@ -104,11 +104,13 @@ readme = readme.replace(
     web_url(owner, reponame),
 )
 
+readme = readme.replace("My Font", reponame.title())
+
 with open("README.md", "w") as fh:
     fh.write(readme)
 
 # Fix the OFL
-
+print("Fixing OFL")
 ofl = open("OFL.txt").read()
 ofl = ofl.replace(web_url(BASE_OWNER, BASE_REPONAME), web_url(owner, reponame))
 ofl = ofl.replace("My Font", reponame.title())
