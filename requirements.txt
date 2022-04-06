@@ -4,3 +4,4 @@ git+https://github.com/googlefonts/gftools#egg=gftools
 drawbot-skia>=0.4.8
 sh>=1.14.2
 bumpfontversion>=0.2.0
+chevron
