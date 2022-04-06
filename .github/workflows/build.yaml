@@ -15,11 +15,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Install sys tools/deps
-      run: |
-        sudo apt-get update
-        sudo apt-get install ttfautohint
-        sudo snap install yq
     - uses: actions/cache@v2
       with:
         path: ./venv/
@@ -33,7 +28,8 @@ jobs:
       name: First-run setup
       if: github.repository != 'googlefonts/Unified-Font-Repository'
       with:
-        file_pattern: .init.stamp README.md requirements.txt
+        file_pattern: .init.stamp README.md requirements.txt OFL.txt
+        commit_message: "Personalize for this repo"
     - name: gen zip file name
       id: zip-name
       shell: bash
