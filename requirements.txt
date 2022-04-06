@@ -1,6 +1,6 @@
 fontmake>=2.4
 fontbakery>=0.8
-git+https://github.com/googlefonts/gftools#egg=gftools
+git+https://github.com/googlefonts/gftools@gflang-samples#egg=gftools
 drawbot-skia>=0.4.8
 sh>=1.14.2
 bumpfontversion>=0.2.0

@@ -1,8 +1,11 @@
 import chevron
 import os
+from glob import glob
 from sh import git
 import re
 from urllib.parse import quote
+from fontTools.ttLib import TTFont
+from gftools.utils import font_sample_text
 
 
 class FileTreeMaker(object):
@@ -47,6 +50,18 @@ repo_url = (
 raw_url = "https://raw.githubusercontent.com/" + github_repo + "/gh-pages/badges"
 shields_url = "https://img.shields.io/endpoint?url=" + quote(raw_url, safe="")
 
+unhinted = glob("fonts/unhinted/ttf/*.ttf")
+grab_a_font = None
+if unhinted:
+    grab_a_font = unhinted[0]
+
+sample_text = ""
+if grab_a_font:
+    sample_text = font_sample_text(TTFont(grab_a_font))
+    sample_text = " ".join(sample_text)
+    sample_text += " " + sample_text
+
+
 with open("README.md") as readme:
     lines = readme.read()
     m = re.match("^# (.*)", lines)
@@ -66,6 +81,9 @@ with open("scripts/index.html", "r") as f:
                     "commit": commit,
                     "project": project,
                     "shields_url": shields_url,
+                    "a_font": grab_a_font,
+                    "sample_text": sample_text
+
                 },
             )
         )

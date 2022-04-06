@@ -16,12 +16,32 @@
 			crossorigin="anonymous"
 		></script>
 		<style>
+			.container {
+				background-color: rgba(255, 255, 255, 0.25);
+			}
 			.li-0 {
 				display: inline-block;
 				vertical-align: top;
 				margin: 5px;
 				padding: 10px;
-				background-color: #eee;
+				background-color: rgba(255, 255, 255, 0.75);
+			}
+			@font-face {
+				font-family: "Noto";
+				src: url({{a_font}});
+			}
+			.noto {
+				font-family: "Noto";
+			}
+			.relative {
+				position: relative;
+			}
+			.heading {
+				position: absolute;
+				overflow: hidden;
+				height: 100%;
+				opacity: 0.1;
+				z-index: -1;
 			}
 		</style>
 	</head>
@@ -37,45 +57,49 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container mt-1">
-			<h3>Fonts (HEAD build)</h3>
+		<div class="relative">
+			<h1 class="display-3 heading noto">{{sample_text}}</h1>
 
-			<div class="row align-items-start">{{{ fonttree}}}</div>
+			<div class="container p-5">
+				<h3>Fonts (HEAD build)</h3>
 
-			<h3>Tests</h3>
+				<div class="row align-items-start">{{{ fonttree}}}</div>
 
-			<img src="{{{shields_url}}}%2Foverall.json" />
-			<img src="{{{shields_url}}}%2FGoogleFonts.json" />
-			<img src="{{{shields_url}}}%2FNotoFonts.json" />
-			<img src="{{{shields_url}}}%2FOutlineCorrectnessChecks.json" />
-			<img src="{{{shields_url}}}%2FShapingChecks.json" />
-			<img src="{{{shields_url}}}%2FUniversal.json" />
+				<h3>Tests</h3>
 
-			<ul>
-				<li>
-					<a href="fontbakery/notofonts-report.html"
-						>FontBakery Report (Noto Fonts profile)</a
-					>
-				</li>
-				<li>
-					<a href="fontbakery/googlefonts-report.html"
-						>FontBakery Report (Google Fonts)</a
-					>
-				</li>
-			</ul>
+				<img src="{{{shields_url}}}%2Foverall.json" />
+				<img src="{{{shields_url}}}%2FGoogleFonts.json" />
+				<img src="{{{shields_url}}}%2FNotoFonts.json" />
+				<img src="{{{shields_url}}}%2FOutlineCorrectnessChecks.json" />
+				<img src="{{{shields_url}}}%2FShapingChecks.json" />
+				<img src="{{{shields_url}}}%2FUniversal.json" />
 
-			<h3>Proof sheets</h3>
-			<ul>
-				<li>
-					<a href="proof/glyphs.html">All glyphs</a>
-				</li>
-				<li>
-					<a href="proof/text.html">Sample text</a>
-				</li>
-				<li>
-					<a href="proof/waterfall.html">Waterfall test</a>
-				</li>
-			</ul>
+				<ul>
+					<li>
+						<a href="fontbakery/notofonts-report.html"
+							>FontBakery Report (Noto Fonts profile)</a
+						>
+					</li>
+					<li>
+						<a href="fontbakery/googlefonts-report.html"
+							>FontBakery Report (Google Fonts)</a
+						>
+					</li>
+				</ul>
+
+				<h3>Proof sheets</h3>
+				<ul>
+					<li>
+						<a href="proof/glyphs.html">All glyphs</a>
+					</li>
+					<li>
+						<a href="proof/text.html">Sample text</a>
+					</li>
+					<li>
+						<a href="proof/waterfall.html">Waterfall test</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</body>
 </html>
