@@ -118,11 +118,8 @@ ofl = ofl.replace("20**", str(datetime.date.today().year))
 with open("OFL.txt", "w") as fh:
     fh.write(ofl)
 
-# Pin the dependencies
-print("Pinning dependencies")
-dependencies = subprocess.check_output(["pip", "freeze"])
-with open("requirements.txt", "wb") as dependency_file:
-    dependency_file.write(dependencies)
+# Upstream pins the dependencies here. We do not. This is because Noto
+# often needs bleeding-edge fontTools/ufo2ft/glyphsLib etc. :-(
 
 # Finally, we add a "touch file" called ".init.stamp" to the repository which
 # prevents this first-run process from being run again.
