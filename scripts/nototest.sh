@@ -12,14 +12,14 @@ then
 fi
 
 . venv/bin/activate
-fontbakery check-notofonts -l WARN --succinct --badges out/badges --html out/fontbakery/notofonts-report.html --ghmarkdown out/fontbakery/notofonts-report.md $NOTO_TARGET_OUTPUTS
+fontbakery check-notofonts --configuration fontbakery.yml -l WARN --succinct --badges out/badges --html out/fontbakery/notofonts-report.html --ghmarkdown out/fontbakery/notofonts-report.md $NOTO_TARGET_OUTPUTS
 NOTO_EXIT=$?
 
 # "Full" fonts (if any) must pass googlefonts profile
 GOOGLE_TARGET_OUTPUTS="$(find fonts/full/ttf -type f)"
 if [ -n $GOOGLE_TARGET_OUTPUTS ]
 then
-	fontbakery check-googlefonts -l WARN --succinct --badges out/badges --html out/fontbakery/googlefonts-report.html --ghmarkdown out/fontbakery/googlefonts-report.md $GOOGLE_TARGET_OUTPUTS
+	fontbakery check-googlefonts --configuration fontbakery.yml -l WARN --succinct --badges out/badges --html out/fontbakery/googlefonts-report.html --ghmarkdown out/fontbakery/googlefonts-report.md $GOOGLE_TARGET_OUTPUTS
 	GF_EXIT=$?
 fi
 
