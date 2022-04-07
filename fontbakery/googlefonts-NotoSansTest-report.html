@@ -94,20 +94,20 @@
 <h3>Checking OS/2 fsType does not impose restrictions.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/fstype&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>In this font fsType is set to 8 meaning that:
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>In this font fsType is set to 8 meaning that:
 The font may be embedded but must only be installed temporarily on other systems.</p>
 <p>No such DRM restrictions can be enabled on the Google Fonts collection, so the fsType field must be set to zero (Installable Embedding) instead. [code: drm]</p>
 </span></li></ul></div></details>
 <h3>Checking OS/2 achVendID.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/vendor_id&gt;</div>
 
-<details><summary>⚠️ <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
+<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 VendorID value 'NONE' is not yet recognized. If you registered it recently, then it's safe to ignore this warning message. Otherwise, you should set it to your own unique 4 character code, and register it with Microsoft at https://www.microsoft.com/typography/links/vendorlist.aspx
 [code: unknown]</p>
 </span></li></ul></div></details>
 <h3>Check `Google Fonts Latin Core` glyph coverage.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/glyph_coverage&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
 <pre><code>- 0x2212 (MINUS SIGN)
 
 - And 0x2215 (DIVISION SLASH)
@@ -117,24 +117,24 @@ The font may be embedded but must only be installed temporarily on other systems
 <h3>Check license file has good copyright string.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file does not match expected format: &quot;copyright 20** the noto project authors (noto-project-template)&quot;</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file does not match expected format: &quot;copyright 20** the noto project authors (noto-project-template)&quot;</p>
 </span></li></ul></div></details>
 <h3>Check copyright namerecords match license file.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.&quot; Must be changed to &quot;This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL&quot; [code: wrong]</p>
 </span></li></ul></div></details>
 <h3>Copyright notices match canonical pattern in fonts</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/font_copyright&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Name Table entry: Copyright notices should match a pattern similar to: &quot;Copyright 2019 The Familyname Project Authors (git url)&quot;
 But instead we have got:
 &quot;Copyright 2022 Google Inc. All Rights Reserved.&quot; [code: bad-notice-format]</p>
 </span></li></ul></div></details>
 <h3>PPEM must be an integer on hinted fonts.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/integer_ppem_if_hinted&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>This is a hinted font, so it must have bit 3 set on the flags of the head table, so that PPEM values will be rounded into an integer value.</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>This is a hinted font, so it must have bit 3 set on the flags of the head table, so that PPEM values will be rounded into an integer value.</p>
 <p>This can be accomplished by using the 'gftools fix-hinting' command.</p>
 <h1>create virtualenv</h1>
 <p>python3 -m venv venv</p>
@@ -146,28 +146,28 @@ But instead we have got:
 <h3>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2/use_typo_metrics&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/full/ttf/NotoSansTest-Regular.ttf']. [code: missing-os2-fsselection-bit7]</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf']. [code: missing-os2-fsselection-bit7]</p>
 </span></li></ul></div></details>
 <h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/meta/script_lang_tags&gt;</div>
 
-<details><summary>⚠️ <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
 </span></li></ul></div></details>
 <h2>&lt;Section: Universal&gt; 🔥🔥⚠️⚠️⏩⏩⏩⏩⏩ℹ️ℹ️</h2>
 <h3>Checking OS/2 usWinAscent & usWinDescent.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/win_ascent_and_descent&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 251, but got 200 instead. [code: descent]</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 251, but got 200 instead. [code: descent]</p>
 </span></li></ul></div></details>
 <h3>Checking OS/2 Metrics match hhea Metrics.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2_metrics_match_hhea&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 sTypoAscender (800) and hhea ascent (1000) must be equal. [code: ascender]</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2 sTypoAscender (800) and hhea ascent (1000) must be equal. [code: ascender]</p>
 </span></li></ul></div></details>
 <h3>Check if each glyph has the recommended amount of contours.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/contour_count&gt;</div>
 
-<details><summary>⚠️ <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
+<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]</p>
 </span></li><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
 <p>The following glyphs do not have the recommended number of contours:</p>
 <pre><code>- Glyph name: uni00AD	Contours detected: 1	Expected: 0 
@@ -178,25 +178,25 @@ But instead we have got:
 <h3>Ensure dotted circle glyph is present and can attach marks.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/dotted_circle&gt;</div>
 
-<details><summary>⚠️ <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
+<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>No dotted circle glyph present [code: missing-dotted-circle]</p>
 </span></li></ul></div></details>
 <h2>&lt;Section: fontbakery.profiles.hhea&gt; ⚠️</h2>
 <h3>Checking Vertical Metric Linegaps.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/linegaps&gt;</div>
 
-<details><summary>⚠️ <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 sTypoLineGap is not equal to 0. [code: OS/2]</p>
+<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>OS/2 sTypoLineGap is not equal to 0. [code: OS/2]</p>
 </span></li></ul></div></details>
 <h2>&lt;Section: fontbakery.profiles.hmtx&gt; 🔥</h2>
 <h3>Space and non-breaking space have the same width?</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/whitespace_widths&gt;</div>
 
-<details><summary>🔥 <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Space and non-breaking space have differing width: The space glyph named space is 200 font units wide, non-breaking space named (uni00A0) is 260 font units wide, and both should be positive and the same. GlyphsApp has &quot;Sidebearing arithmetic&quot; (https://glyphsapp.com/tutorials/spacing) which allows you to set the non-breaking space width to always equal the space width. [code: different-widths]</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Space and non-breaking space have differing width: The space glyph named space is 200 font units wide, non-breaking space named (uni00A0) is 260 font units wide, and both should be positive and the same. GlyphsApp has &quot;Sidebearing arithmetic&quot; (https://glyphsapp.com/tutorials/spacing) which allows you to set the non-breaking space width to always equal the space width. [code: different-widths]</p>
 </span></li></ul></div></details>
 <h2>&lt;Section: Outline Correctness Checks&gt; ⚠️⚠️</h2>
 <h3>Are any segments inordinately short?</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_short_segments&gt;</div>
 
-<details><summary>⚠️ <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:
+<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:
 * numbersign (U+0023) contains a short segment L&lt;&lt;579.0,251.0&gt;--&lt;579.0,227.0&gt;&gt;
 * numbersign (U+0023) contains a short segment L&lt;&lt;28.0,227.0&gt;--&lt;28.0,251.0&gt;&gt;
 * numbersign (U+0023) contains a short segment L&lt;&lt;67.0,462.0&gt;--&lt;67.0,486.0&gt;&gt;
@@ -212,7 +212,7 @@ But instead we have got:
 <h3>Do outlines contain any semi-vertical or semi-horizontal lines?</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_semi_vertical&gt;</div>
 
-<details><summary>⚠️ <strong>fonts/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
 <ul>
 <li>exclam (U+0021): L&lt;&lt;100.0,174.0&gt;--&lt;98.0,714.0&gt;&gt;</li>
 <li>exclam (U+0021): L&lt;&lt;127.0,714.0&gt;--&lt;125.0,174.0&gt;&gt;</li>
