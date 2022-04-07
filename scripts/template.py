@@ -30,8 +30,8 @@ class FileTreeMaker(object):
                     output_buf.append(f'<li><a href="{full_path}"> {sub_path}</a></li>')
             output_buf.append("%s </ul>" % (prefix))
 
-    def make(self):
-        self.root = "fonts"
+    def make(self, root):
+        self.root = root
         buf = ["<ul>"]
         path_parts = self.root.rsplit(os.path.sep, 1)
         self._recurse(self.root, os.listdir(self.root), "", buf, 0)
@@ -40,7 +40,6 @@ class FileTreeMaker(object):
         return output_str
 
 
-fonttree = FileTreeMaker().make()
 commit = git("rev-parse", "--short", "HEAD")
 github_repo = os.environ.get("GITHUB_REPOSITORY", "")
 repo_url = (
@@ -50,7 +49,38 @@ repo_url = (
 raw_url = "https://raw.githubusercontent.com/" + github_repo + "/gh-pages/badges"
 shields_url = "https://img.shields.io/endpoint?url=" + quote(raw_url, safe="")
 
-unhinted = glob("fonts/unhinted/ttf/*.ttf")
+families = []
+for family in glob("fonts/*"):
+    basename = os.path.basename(family)
+    fname = re.sub(r"([a-z])([A-Z])", r"\1 \2", basename)
+    fonttree = FileTreeMaker().make(family)
+    fontbakery = []
+    for result in glob(f"out/fontbakery/*{basename}*html"):
+        result = result[4:]
+        if "unhinted" in result:
+            fontbakery.append({
+                "name": "Noto fonts, unhinted",
+                "path": result
+            })
+        elif "hinted" in result:
+            fontbakery.append({
+                "name": "Noto fonts, hinted",
+                "path": result
+            })
+        elif "googlefonts" in result:
+            fontbakery.append({
+                "name": "Google Fonts",
+                "path": result
+            })
+    fontbakery = list(reversed(sorted(fontbakery, key=lambda l:l["name"])))
+    families.append({
+        "name": fname,
+        "fonttree": fonttree,
+        "fontbakery": fontbakery
+    })
+
+
+unhinted = glob("fonts/*/unhinted/ttf/*.ttf")
 grab_a_font = None
 if unhinted:
     grab_a_font = unhinted[0]
@@ -70,13 +100,15 @@ with open("README.md") as readme:
     else:
         project = m[1]
 
+print(families)
+
 with open("scripts/index.html", "r") as f:
     with open("out/index.html", "w") as fw:
         fw.write(
             chevron.render(
                 f,
                 {
-                    "fonttree": fonttree,
+                    "families": families,
                     "repo_url": repo_url,
                     "commit": commit,
                     "project": project,
