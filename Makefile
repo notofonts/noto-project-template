@@ -52,3 +52,8 @@ update-ufr:
 update:
 	pip install --upgrade $(dependency)
 
+manual_release: build.stamp
+	@echo "Creating release files manually is contraindicated."
+	@echo "Please use the CI for releases instead."
+	cd fonts; for family in *; do VERSION=`font-v report $$family/unhinted/ttf/* | grep Version | sort -u  | awk '{print $$2}'`; zip -r ../$$family-$$VERSION.zip $$family; done
+
