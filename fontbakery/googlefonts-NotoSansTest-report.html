@@ -157,7 +157,7 @@ But instead we have got:
 <h3>Checking OS/2 usWinAscent & usWinDescent.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/family/win_ascent_and_descent&gt;</div>
 
-<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 251, but got 200 instead. [code: descent]</p>
+<details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>OS/2.usWinDescent value should be equal or greater than 241, but got 200 instead. [code: descent]</p>
 </span></li></ul></div></details>
 <h3>Checking OS/2 Metrics match hhea Metrics.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/os2_metrics_match_hhea&gt;</div>
@@ -193,31 +193,37 @@ But instead we have got:
 <details><summary>🔥 <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Space and non-breaking space have differing width: The space glyph named space is 200 font units wide, non-breaking space named (uni00A0) is 260 font units wide, and both should be positive and the same. GlyphsApp has &quot;Sidebearing arithmetic&quot; (https://glyphsapp.com/tutorials/spacing) which allows you to set the non-breaking space width to always equal the space width. [code: different-widths]</p>
 </span></li></ul></div></details>
 <h2>&lt;Section: Outline Correctness Checks&gt; ⚠️⚠️</h2>
+<h3>Are there any misaligned on-curve points?</h3>
+<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_alignment_miss&gt;</div>
+
+<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have on-curve points which have potentially incorrect y coordinates:
+* exclam (U+0021): X=177.5,Y=2.0 (should be at baseline 0?)
+* exclam (U+0021): X=90.0,Y=2.0 (should be at baseline 0?)
+* period (U+002E): X=177.5,Y=2.0 (should be at baseline 0?)
+* period (U+002E): X=90.0,Y=2.0 (should be at baseline 0?)
+* two (U+0032): X=152.5,Y=699.5 (should be at cap-height 700?)
+* three (U+0033): X=137.0,Y=-1.5 (should be at baseline 0?)
+* three (U+0033): X=143.5,Y=702.0 (should be at cap-height 700?)
+* colon (U+003A): X=177.5,Y=2.0 (should be at baseline 0?)
+* colon (U+003A): X=90.0,Y=2.0 (should be at baseline 0?)
+* question (U+003F): X=222.0,Y=2.0 (should be at baseline 0?) and 46 more.</p>
+<p>Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]</p>
+</span></li></ul></div></details>
 <h3>Are any segments inordinately short?</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_short_segments&gt;</div>
 
 <details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have segments which seem very short:
-* numbersign (U+0023) contains a short segment L&lt;&lt;579.0,251.0&gt;--&lt;579.0,227.0&gt;&gt;
-* numbersign (U+0023) contains a short segment L&lt;&lt;28.0,227.0&gt;--&lt;28.0,251.0&gt;&gt;
-* numbersign (U+0023) contains a short segment L&lt;&lt;67.0,462.0&gt;--&lt;67.0,486.0&gt;&gt;
-* numbersign (U+0023) contains a short segment L&lt;&lt;618.0,486.0&gt;--&lt;618.0,462.0&gt;&gt;
-* two (U+0032) contains a short segment L&lt;&lt;95.0,26.0&gt;--&lt;95.0,25.0&gt;&gt;
-* G (U+0047) contains a short segment L&lt;&lt;367.0,325.0&gt;--&lt;367.0,350.0&gt;&gt;
-* M (U+004D) contains a short segment L&lt;&lt;130.0,679.0&gt;--&lt;128.0,679.0&gt;&gt;
-* M (U+004D) contains a short segment L&lt;&lt;129.0,0.0&gt;--&lt;103.0,0.0&gt;&gt;
-* M (U+004D) contains a short segment L&lt;&lt;417.0,48.0&gt;--&lt;420.0,48.0&gt;&gt;
-* M (U+004D) contains a short segment L&lt;&lt;733.0,0.0&gt;--&lt;707.0,0.0&gt;&gt; and 54 more.</p>
+* two (U+0032) contains a short segment L&lt;&lt;159.0,84.0&gt;--&lt;159.0,80.0&gt;&gt;
+* at (U+0040) contains a short segment B&lt;&lt;613.0,293.0&gt;-&lt;612.0,275.0&gt;-&lt;612.0,267.5&gt;&gt;
+* at (U+0040) contains a short segment B&lt;&lt;612.0,267.5&gt;-&lt;612.0,260.0&gt;-&lt;612.0,257.0&gt;&gt;
+* M (U+004D) contains a short segment L&lt;&lt;177.0,626.0&gt;--&lt;173.0,626.0&gt;&gt;
+* M (U+004D) contains a short segment L&lt;&lt;450.0,129.0&gt;--&lt;454.0,129.0&gt;&gt;
+* N (U+004E) contains a short segment L&lt;&lt;176.0,593.0&gt;--&lt;172.0,593.0&gt;&gt;
+* N (U+004E) contains a short segment L&lt;&lt;582.0,123.0&gt;--&lt;586.0,123.0&gt;&gt;
+* Q (U+0051) contains a short segment B&lt;&lt;416.0,-9.0&gt;-&lt;410.0,-9.0&gt;-&lt;403.5,-9.5&gt;&gt;
+* Q (U+0051) contains a short segment B&lt;&lt;403.5,-9.5&gt;-&lt;397.0,-10.0&gt;-&lt;391.0,-10.0&gt;&gt;
+* W (U+0057) contains a short segment B&lt;&lt;468.0,577.5&gt;-&lt;463.0,600.0&gt;-&lt;461.0,609.0&gt;&gt; and 32 more.</p>
 <p>Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]</p>
-</span></li></ul></div></details>
-<h3>Do outlines contain any semi-vertical or semi-horizontal lines?</h3>
-<div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/outline_semi_vertical&gt;</div>
-
-<details><summary>⚠️ <strong>fonts/NotoSansTest/full/ttf/NotoSansTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
-<ul>
-<li>exclam (U+0021): L&lt;&lt;100.0,174.0&gt;--&lt;98.0,714.0&gt;&gt;</li>
-<li>exclam (U+0021): L&lt;&lt;127.0,714.0&gt;--&lt;125.0,174.0&gt;&gt;</li>
-<li>exclamdown (U+00A1): L&lt;&lt;122.0,354.0&gt;--&lt;124.0,-186.0&gt;&gt; and exclamdown (U+00A1): L&lt;&lt;96.0,-186.0&gt;--&lt;98.0,354.0&gt;&gt; [code: found-semi-vertical]</li>
-</ul>
 </span></li></ul></div></details>
                     </body>
                 </html>

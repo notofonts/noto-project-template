@@ -52,7 +52,7 @@ pip install git+https://www.github.com/googlefonts/tools [code: bad-flags]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 251, but got 200 instead. [code: descent]
+* 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 241, but got 200 instead. [code: descent]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 Metrics match hhea Metrics. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/os2_metrics_match_hhea">com.google.fonts/check/os2_metrics_match_hhea</a>)</summary><div>
 
 
@@ -89,29 +89,38 @@ The following glyphs do not have the recommended number of contours:
 
 
 * ⚠ **WARN** OS/2 sTypoLineGap is not equal to 0. [code: OS/2]
+</div></details><details><summary>⚠ <b>WARN:</b> Are there any misaligned on-curve points? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_alignment_miss">com.google.fonts/check/outline_alignment_miss</a>)</summary><div>
+
+
+* ⚠ **WARN** The following glyphs have on-curve points which have potentially incorrect y coordinates:
+	* exclam (U+0021): X=177.5,Y=2.0 (should be at baseline 0?)
+	* exclam (U+0021): X=90.0,Y=2.0 (should be at baseline 0?)
+	* period (U+002E): X=177.5,Y=2.0 (should be at baseline 0?)
+	* period (U+002E): X=90.0,Y=2.0 (should be at baseline 0?)
+	* two (U+0032): X=152.5,Y=699.5 (should be at cap-height 700?)
+	* three (U+0033): X=137.0,Y=-1.5 (should be at baseline 0?)
+	* three (U+0033): X=143.5,Y=702.0 (should be at cap-height 700?)
+	* colon (U+003A): X=177.5,Y=2.0 (should be at baseline 0?)
+	* colon (U+003A): X=90.0,Y=2.0 (should be at baseline 0?)
+	* question (U+003F): X=222.0,Y=2.0 (should be at baseline 0?) and 46 more.
+
+Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Are any segments inordinately short? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_short_segments">com.google.fonts/check/outline_short_segments</a>)</summary><div>
 
 
 * ⚠ **WARN** The following glyphs have segments which seem very short:
-	* numbersign (U+0023) contains a short segment L<<579.0,251.0>--<579.0,227.0>>
-	* numbersign (U+0023) contains a short segment L<<28.0,227.0>--<28.0,251.0>>
-	* numbersign (U+0023) contains a short segment L<<67.0,462.0>--<67.0,486.0>>
-	* numbersign (U+0023) contains a short segment L<<618.0,486.0>--<618.0,462.0>>
-	* two (U+0032) contains a short segment L<<95.0,26.0>--<95.0,25.0>>
-	* G (U+0047) contains a short segment L<<367.0,325.0>--<367.0,350.0>>
-	* M (U+004D) contains a short segment L<<130.0,679.0>--<128.0,679.0>>
-	* M (U+004D) contains a short segment L<<129.0,0.0>--<103.0,0.0>>
-	* M (U+004D) contains a short segment L<<417.0,48.0>--<420.0,48.0>>
-	* M (U+004D) contains a short segment L<<733.0,0.0>--<707.0,0.0>> and 54 more.
+	* two (U+0032) contains a short segment L<<159.0,84.0>--<159.0,80.0>>
+	* at (U+0040) contains a short segment B<<613.0,293.0>-<612.0,275.0>-<612.0,267.5>>
+	* at (U+0040) contains a short segment B<<612.0,267.5>-<612.0,260.0>-<612.0,257.0>>
+	* M (U+004D) contains a short segment L<<177.0,626.0>--<173.0,626.0>>
+	* M (U+004D) contains a short segment L<<450.0,129.0>--<454.0,129.0>>
+	* N (U+004E) contains a short segment L<<176.0,593.0>--<172.0,593.0>>
+	* N (U+004E) contains a short segment L<<582.0,123.0>--<586.0,123.0>>
+	* Q (U+0051) contains a short segment B<<416.0,-9.0>-<410.0,-9.0>-<403.5,-9.5>>
+	* Q (U+0051) contains a short segment B<<403.5,-9.5>-<397.0,-10.0>-<391.0,-10.0>>
+	* W (U+0057) contains a short segment B<<468.0,577.5>-<463.0,600.0>-<461.0,609.0>> and 32 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-short-segments]
-</div></details><details><summary>⚠ <b>WARN:</b> Do outlines contain any semi-vertical or semi-horizontal lines? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_semi_vertical">com.google.fonts/check/outline_semi_vertical</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyphs have semi-vertical/semi-horizontal lines:
- * exclam (U+0021): L<<100.0,174.0>--<98.0,714.0>>
- * exclam (U+0021): L<<127.0,714.0>--<125.0,174.0>>
- * exclamdown (U+00A1): L<<122.0,354.0>--<124.0,-186.0>> and exclamdown (U+00A1): L<<96.0,-186.0>--<98.0,354.0>> [code: found-semi-vertical]
 </div></details><br></div></details>
 ### Summary
 
