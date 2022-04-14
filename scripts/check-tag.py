@@ -1,7 +1,10 @@
 import os
 import sys
 from fontv.libfv import FontVersion
+from fontTools.ttLib import TTFont
 from glob import glob
+import yaml
+
 
 tag = sys.argv[1]
 try:
@@ -22,6 +25,18 @@ if not a_font:
 
 
 ttf_version = FontVersion(a_font[0]).version
+real_family_name = TTFont(a_font[0])["name"].getDebugName(1)
+
+# Identify the config file which created this
+found_config = None
+for config in glob("sources/*yaml"):
+	this_config = yaml.load(open(config), Loader=yaml.FullLoader)
+	if "familyName" in this_config and this_config["familyName"] == real_family_name:
+		found_config = config
+		break
+if not found_config:
+	print(f"::error file=scripts/checktag.py::Could not identify config file for {family}")
+	sys.exit(1)
 
 if "Version "+version != ttf_version:
 	print(f"::error file=scripts/checktag.py::Trying to create release for version {version}, found font version {ttf_version}")
@@ -29,4 +44,6 @@ if "Version "+version != ttf_version:
 
 print("::set-output name=result::pass")
 print(f"::set-output name=family::{family}")
+print(f"::set-output name=real_family_name::{real_family_name}")
+print(f"::set-output name=config_file::{found_config}")
 sys.exit(0)
