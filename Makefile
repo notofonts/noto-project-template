@@ -1,7 +1,5 @@
 SOURCES=$(shell python3 scripts/read-config.py --sources )
 FAMILY=$(shell python3 scripts/read-config.py --family )
-DRAWBOT_SCRIPTS=$(shell ls documentation/*.py)
-DRAWBOT_OUTPUT=$(shell ls documentation/*.py | sed 's/\.py/.png/g')
 
 help:
 	@echo "###"
@@ -35,9 +33,6 @@ test: venv build.stamp
 
 proof: venv build.stamp
 	. venv/bin/activate; mkdir -p out/ out/proof; gftools gen-html proof $(shell find fonts/*/unhinted/ttf -type f) -o out/proof
-
-images: venv build.stamp $(DRAWBOT_OUTPUT)
-	git add documentation/*.png && git commit -m "Rebuild images" documentation/*.png
 
 %.png: %.py build.stamp
 	python3 $< --output $@
