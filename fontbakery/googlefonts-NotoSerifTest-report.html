@@ -116,15 +116,11 @@ The font may be embedded but must only be installed temporarily on other systems
 
 <details><summary>🔥 <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
 <pre><code>- 0x2212 (MINUS SIGN)
-
-- And 0x2215 (DIVISION SLASH)
 </code></pre>
 <p>[code: missing-codepoints]</p>
 </span></li></ul></div></details>
 <details><summary>🔥 <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Missing required codepoints:</p>
 <pre><code>- 0x2212 (MINUS SIGN)
-
-- And 0x2215 (DIVISION SLASH)
 </code></pre>
 <p>[code: missing-codepoints]</p>
 </span></li></ul></div></details>
@@ -207,16 +203,16 @@ But instead we have got:
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
 
 <details><summary>⚠️ <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:
-- two.dnom
-- three.numr
 - one.numr
+- three.numr
+- two.dnom
 - And four.dnom
 [code: unreachable-glyphs]</p>
 </span></li></ul></div></details>
 <details><summary>⚠️ <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:
-- two.dnom
-- three.numr
 - one.numr
+- three.numr
+- two.dnom
 - And four.dnom
 [code: unreachable-glyphs]</p>
 </span></li></ul></div></details>

@@ -15,8 +15,6 @@ No such DRM restrictions can be enabled on the Google Fonts collection, so the f
 * 🔥 **FAIL** Missing required codepoints:
 
 	- 0x2212 (MINUS SIGN)
- 
-	- And 0x2215 (DIVISION SLASH)
  [code: missing-codepoints]
 </div></details><details><summary>🔥 <b>FAIL:</b> Check license file has good copyright string. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/license/OFL_copyright">com.google.fonts/check/license/OFL_copyright</a>)</summary><div>
 
