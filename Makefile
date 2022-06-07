@@ -29,7 +29,7 @@ venv/touchfile: requirements.txt
 	touch venv/touchfile
 
 test: venv build.stamp
-	sh scripts/nototest.sh # Easier than messing with dollar escaping
+	. venv/bin/activate; python3 -m notoqa
 
 proof: venv build.stamp
 	. venv/bin/activate; mkdir -p out/ out/proof; gftools gen-html proof $(shell find fonts/*/unhinted/ttf -type f) -o out/proof

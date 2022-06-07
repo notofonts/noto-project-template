@@ -1,5 +1,5 @@
-fontbakery>=0.8
 git+https://github.com/notofonts/notobuilder
+#git+https://github.com/notofonts/notoqa
 drawbot-skia>=0.4.8
 sh>=1.14.2
 bumpfontversion
