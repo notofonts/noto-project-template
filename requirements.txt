@@ -1,6 +1,5 @@
-fontmake>=3.3
 fontbakery>=0.8
-git+https://github.com/googlefonts/gftools#egg=gftools
+git+https://github.com/notofonts/notobuilder
 drawbot-skia>=0.4.8
 sh>=1.14.2
 bumpfontversion
