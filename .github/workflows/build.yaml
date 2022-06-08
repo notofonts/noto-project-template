@@ -3,6 +3,10 @@ name: Build font and specimen
 on:
   - push
 
+env:
+  GH_TOKEN: ${{ SECRETS.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ SECRETS.GITHUB_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
