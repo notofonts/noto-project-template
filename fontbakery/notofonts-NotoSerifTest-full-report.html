@@ -127,9 +127,9 @@ The font may be embedded but must only be installed temporarily on other systems
 <h3>Check license file has good copyright string.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/license/OFL_copyright&gt;</div>
 
-<details><summary>🔥 <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file does not match expected format: &quot;copyright 20** the noto project authors (noto-project-template)&quot;</p>
+<details><summary>🔥 <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file does not match expected format: &quot;copyright 20** the noto project authors (https://github.com/notofonts/noto-project-template)&quot;</p>
 </span></li></ul></div></details>
-<details><summary>🔥 <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file does not match expected format: &quot;copyright 20** the noto project authors (noto-project-template)&quot;</p>
+<details><summary>🔥 <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>First line in license file does not match expected format: &quot;copyright 20** the noto project authors (https://github.com/notofonts/noto-project-template)&quot;</p>
 </span></li></ul></div></details>
 <h3>Check copyright namerecords match license file.</h3>
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/name/license&gt;</div>
@@ -203,17 +203,17 @@ But instead we have got:
 <div>Check ID: &lt;FontBakeryCheck:com.google.fonts/check/unreachable_glyphs&gt;</div>
 
 <details><summary>⚠️ <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Bold.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:
-- one.numr
-- three.numr
+- four.dnom
 - two.dnom
-- And four.dnom
+- three.numr
+- And one.numr
 [code: unreachable-glyphs]</p>
 </span></li></ul></div></details>
 <details><summary>⚠️ <strong>fonts/NotoSerifTest/full/ttf/NotoSerifTest-Regular.ttf</strong></summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs could not be reached by codepoint or substitution rules:
-- one.numr
-- three.numr
+- four.dnom
 - two.dnom
-- And four.dnom
+- three.numr
+- And one.numr
 [code: unreachable-glyphs]</p>
 </span></li></ul></div></details>
 <h3>Check if each glyph has the recommended amount of contours.</h3>

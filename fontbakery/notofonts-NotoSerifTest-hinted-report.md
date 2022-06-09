@@ -24,7 +24,7 @@ Fontbakery version: 0.8.8
 
 
 <style type="text/css">
-    @font-face {font-family: "TestFont"; src: url(../../fonts/NotoSerifTest/unhinted/ttf/NotoSerifTest-Bold.ttf);}
+    @font-face {font-family: "TestFont"; src: url(../../fonts/NotoSerifTest/hinted/ttf/NotoSerifTest-Bold.ttf);}
     .tf { font-family: "TestFont"; }
     .shaping pre { font-size: 1.2rem; }
     .shaping li { font-size: 1.2rem; border-top: 1px solid #ddd; padding: 12px; margin-top: 12px; }
