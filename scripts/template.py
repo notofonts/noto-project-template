@@ -6,6 +6,7 @@ import re
 from urllib.parse import quote
 from fontTools.ttLib import TTFont
 from gftools.utils import font_sample_text
+from pathlib import Path
 
 
 class FileTreeMaker(object):
@@ -73,10 +74,18 @@ for family in glob("fonts/*"):
                 "path": result
             })
     fontbakery = list(reversed(sorted(fontbakery, key=lambda l:l["name"])))
+    diffenator = []
+    for result in glob(f"out/qa/{basename}/Diffenator/*/report.html"):
+        diffenator.append({
+            "name": "Diffenator report, " + Path(result).parent.stem,
+            "path": result[4:],
+        })
+
     families.append({
         "name": fname,
         "fonttree": fonttree,
-        "fontbakery": fontbakery
+        "fontbakery": fontbakery,
+        "diffenator": diffenator
     })
 
 
