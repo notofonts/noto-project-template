@@ -6,6 +6,9 @@ jobs:
   test_in_parent:
     runs-on: ubuntu-latest
     steps:
+    - name: Check auth scopes
+      run: curl -sS -f -I -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}}" https://api.github.com | grep -i x-oauth-scopes
+
     - name: Test that GITHUB_TOKEN works
       run: gh repo list notofonts
       env:
