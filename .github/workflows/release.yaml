@@ -5,4 +5,5 @@ on:
     tags: '*'
 
 jobs:
-  - uses: notofonts/notobuilder/.github/workflows/release.yaml@main
+  release_font:
+    uses: notofonts/notobuilder/.github/workflows/release.yaml@main
