@@ -117,10 +117,10 @@ Got: <svg class="shaping-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11
 
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
-	- three.numr
+	- two.dnom
 	- four.dnom
 	- one.numr 
-	- And two.dnom
+	- And three.numr
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -239,10 +239,10 @@ pip install git+https://www.github.com/googlefonts/tools [code: bad-flags]
 
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
-	- three.numr
+	- two.dnom
 	- four.dnom
 	- one.numr 
-	- And two.dnom
+	- And three.numr
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
