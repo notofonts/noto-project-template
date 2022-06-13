@@ -3,6 +3,13 @@ name: Build font and specimen
 on: push
 
 jobs:
+  test_in_parent:
+    steps:
+    - name: Test that GITHUB_TOKEN works
+      run: gh repo list notofonts
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}}
+
   build_font:
     uses: notofonts/notobuilder/.github/workflows/build.yaml@main
     secrets: inherit
