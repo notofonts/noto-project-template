@@ -5,3 +5,5 @@ on: push
 jobs:
   build_font:
     uses: notofonts/notobuilder/.github/workflows/build.yaml@main
+    env:
+      GITHUB_TOKEN: ${{github.token}}
