@@ -4,4 +4,4 @@ on: push
 
 jobs:
   build_font:
-    uses: notofonts/notobuilder/.github/workflows/build.yml@main
+    uses: notofonts/notobuilder/.github/workflows/build.yaml@main
