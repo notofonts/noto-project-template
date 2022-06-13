@@ -25,8 +25,10 @@ If you want to build fonts manually on your own computer:
 
 The proof files and QA tests are also available automatically via GitHub Actions - look at `https://yourname.github.io/your-font-repository-name`.
 
-For information on how the build process works and how to maintain it,
-see [the README file of the notofonts.github.io repository](https://github.com/notofonts/notofonts.github.io/blob/main/README.md)
+For information on how to work on Noto fonts, how the build process
+works and how to maintain it, see [the README file of the
+notofonts.github.io
+repository](https://github.com/notofonts/notofonts.github.io/blob/main/README.md)
 
 ## License
 
