@@ -3,4 +3,5 @@ name: Build font and specimen
 on: push
 
 jobs:
-  uses: notofonts/notobuilder/.github/workflows/build.yml@main
+  build_font:
+    uses: notofonts/notobuilder/.github/workflows/build.yml@main
