@@ -7,3 +7,4 @@ on:
 jobs:
   release_font:
     uses: notofonts/notobuilder/.github/workflows/release.yaml@main
+    secrets: inherit
