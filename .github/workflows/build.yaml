@@ -3,17 +3,6 @@ name: Build font and specimen
 on: push
 
 jobs:
-  test_in_parent:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check auth scopes
-      run: |
-        curl -sS -f -I -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" https://api.github.com | grep -i x-oauth-scopes
-    - name: Test that GITHUB_TOKEN works
-      run: gh repo list notofonts
-      env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
   build_font:
     uses: notofonts/notobuilder/.github/workflows/build.yaml@main
     secrets: inherit
