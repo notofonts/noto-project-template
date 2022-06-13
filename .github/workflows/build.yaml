@@ -4,6 +4,7 @@ on: push
 
 jobs:
   test_in_parent:
+    runs-on: ubuntu-latest
     steps:
     - name: Test that GITHUB_TOKEN works
       run: gh repo list notofonts
