@@ -2,6 +2,3 @@ googleFonts: true
 sources:
 - NotoSansTest.glyphs
 familyName: Noto Sans Test
-includeSubsets:
-  - name: "GF Glyph Sets/GF-latin-core"
-    from: "Noto Sans"
