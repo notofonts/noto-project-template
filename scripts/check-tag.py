@@ -35,7 +35,7 @@ for config in glob("sources/*yaml"):
 		found_config = config
 		break
 if not found_config:
-	print(f"::error file=scripts/checktag.py::Could not identify config file for {family}")
+	print(f"::error file=scripts/checktag.py::Could not identify config file for {family} (found a font of family {real_family_name})")
 	sys.exit(1)
 
 if "Version "+version != ttf_version:
