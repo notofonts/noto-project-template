@@ -18,9 +18,9 @@ if not os.path.exists("fonts/" + family):
 	print(f"::error file=scripts/checktag.py::Family '{family}' did not exist")
 	sys.exit(1)
 
-a_font = glob(f"fonts/{family}/*/*/*.ttf")
+a_font = glob(f"fonts/{family}/*/*/*Regular.ttf") + glob(f"fonts/{family}/*/*/*VF.ttf")
 if not a_font:
-	print(f"::error file=scripts/checktag.py::No fonts found for family '{family}'")
+	print(f"::error file=scripts/checktag.py::No regular fonts found for family '{family}'")
 	sys.exit(1)
 
 
