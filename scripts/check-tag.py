@@ -25,13 +25,13 @@ if not a_font:
 
 
 ttf_version = FontVersion(a_font[0]).version
-real_family_name = TTFont(a_font[0])["name"].getDebugName(1)
+real_family_names = [ TTFont(x)["name"].getDebugName(1) for x in a_font ]
 
 # Identify the config file which created this
 found_config = None
 for config in glob("sources/*yaml"):
 	this_config = yaml.load(open(config), Loader=yaml.FullLoader)
-	if "familyName" in this_config and this_config["familyName"] == real_family_name:
+	if "familyName" in this_config and this_config["familyName"] in real_family_names:
 		found_config = config
 		break
 if not found_config:
